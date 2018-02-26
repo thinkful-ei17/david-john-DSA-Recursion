@@ -152,4 +152,58 @@ function fibonacci(num) {
 }
 console.log('====== Fibonacci ======');
 console.log(fibonacci(7));
+
 // Organization Chart
+
+// const nameHierarchy = { 
+// Zuckerberg: { 
+// Schroepfer: { 
+// Bosworth: { 
+// Steve: {}, 
+// Kyle: {}, 
+// Andra: {} 
+// }, 
+// Zhao: { 
+// Richie: {}, 
+// Sofia: {}, 
+// Jen: {} 
+// } 
+// }, 
+// Schrage: { 
+// VanDyck: { 
+// Sabrina: {}, 
+// Michelle: {}, 
+// Josh: {} 
+// }, 
+// Swain: { 
+// Blanch: {}, 
+// Tom: {}, 
+// Joe: {} 
+// } 
+// }, 
+// Sandberg: { 
+// Goler: { 
+// Eddie: {}, 
+// Julie: {}, 
+// Annie: {} 
+// }, 
+// Hernandez: { 
+// Rowi: {}, 
+// Inga: {},
+// Morgan: {} 
+// }, 
+// Moissinac: { 
+// Amy: {}, 
+// Chuck: {}, 
+// Vinni: {} 
+// }, 
+// Kelley: { 
+// Eric: {}, 
+// Ana: {}, 
+// Wes: {} 
+// } 
+// }
+// } 
+// }
+// function traverse(obj,indent) {
+// }
