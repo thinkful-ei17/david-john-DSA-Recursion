@@ -83,3 +83,73 @@ function binary(num) {
   
 console.log('====== Binary Representation ======');
 console.log(binary(25));
+
+// Anagrams
+
+function anagrams(str) {
+  const finalArr = [];
+  if(str.length === 1) {
+    return [str];
+  }
+  for (let i=0; i<str.length; i++) {
+    const removed = str.slice(0,i)+str.slice(i+1);
+    const arr = anagrams(removed);
+    for (let j=0; j<arr.length; j++) {
+      finalArr.push(str[i] + arr[j]);
+    }
+  } 
+  return finalArr;
+}
+
+console.log('====== Anagrams ======');
+console.log(anagrams('dav'));
+
+// Animal Hierarchy
+
+const animalHierarchy = [
+  {id: 'Animals', parent: null},
+  {id: 'Mammals', parent: 'Animals'},
+  {id: 'Dogs', parent:'Mammals' },
+  {id: 'Cats', parent:'Mammals' },
+  {id: 'Golden Retriever', parent: 'Dogs'},
+  {id: 'Husky', parent:'Dogs' },
+  {id: 'Bengal', parent:'Cats' }
+];
+
+// ==============================
+function traverse(animalHierarchy, parent) {
+  let node = {};
+  animalHierarchy.filter(item => item.parent === parent)
+    .forEach(item => node[item.id] = traverse(animalHierarchy, item.id));
+  return node;  
+}
+console.log('====== Animal Hierarchy ======');
+console.log(JSON.stringify(traverse(animalHierarchy, null)));
+
+// Factorial
+
+function factorial(num) { 
+  if(num === 0){ 
+    return 1; 
+  } else { 
+    return num * factorial(num-1); 
+  }
+}
+console.log('====== Factorial ======');
+console.log(factorial(5));
+
+// Fibonacci
+
+function fibonacci(num) { 
+  if(num <= 0){ 
+    return 0; 
+  } 
+  if(num <=2 ){ 
+    return 1; 
+  } else { 
+    return fibonacci(num -1) + fibonacci(num -2);
+  } 
+}
+console.log('====== Fibonacci ======');
+console.log(fibonacci(7));
+// Organization Chart
